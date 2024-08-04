@@ -15,7 +15,7 @@ Expense Tracker is a simple web application built using React to help you manage
 ## Project Structure
 
 The project is created using Create React App and styled with Tailwind CSS and some custom CSS. Here is the structure of the project:
-
+```
 expense-tracker/
 ├── public/
 ├── src/
@@ -37,7 +37,7 @@ expense-tracker/
 ├── package.json
 └── README.md
 
-
+```
 ### Components
 
 1. **App.js**
