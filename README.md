@@ -86,10 +86,11 @@ expense-tracker/
 
 1. Clone the repository:
    git clone https://github.com/thakur2002/Expense-Tracker.git
+3. Navigate to the project directory:
    cd expense-tracker
-2. Install the dependencies:
+4. Install the dependencies:
       npm install
-3. Start the development server:
+5. Start the development server:
     npm start
    
 ## Usage
