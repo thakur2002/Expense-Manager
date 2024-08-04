@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Expense Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Expense Tracker is a simple web application built using React to help you manage your finances. You can add and categorize your income and expenses, view totals, and filter transactions by category.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add income and expenses
+- Delete any transaction
+- Filter transactions by category in both income and expense sections
+- View totals for filtered transactions by category
+- View total income, total expenses, and net income at the top of the page
+- Transactions are stored locally using the browser's local storage
+- Transactions gets sorted according to dates
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The project is created using Create React App and styled with Tailwind CSS and some custom CSS. Here is the structure of the project:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+expense-tracker/
+├── public/
+├── src/
+│ ├── components/
+│ │ ├── Header.js
+│ │ ├── Maincontent.js
+│ │ ├── Modal.js
+│ │ ├── Total.js
+│ │ ├── TransactionForm.js
+│ │ └── TransactionList.js
+│ ├── context/
+│ │ ├── Appreducer.js
+│ │ └── Globalstate.js
+│ ├── App.css
+│ ├── App.js
+│ ├── index.css
+│ └── index.js
+├── .gitignore
+├── package.json
+└── README.md
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Components
 
-### `npm run build`
+1. **App.js**
+   - The root component that sets up the application structure. It includes the `Header`, `Total`, and two `Maincontent` components (one for income and one for expenses).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Header.js**
+   - A simple header component that displays the title of the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Maincontent.js**
+   - This component manages the main content for either income or expense transactions. It includes buttons to add transactions and displays a list of transactions through the `TransactionList` component. It also includes a modal for adding transactions using the `TransactionForm` component.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Modal.js**
+   - A modal component that displays the `TransactionForm` when adding a new transaction.
 
-### `npm run eject`
+5. **Total.js**
+   - A component that calculates and displays the total income, total expenses, and net income.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+6. **TransactionForm.js**
+   - A form component for adding new transactions. It includes fields for the date, description, category, and amount.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+7. **TransactionList.js**
+   - This component displays the list of transactions. It allows filtering by category and calculates the total amount for the displayed transactions.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Context and State Management
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Globalstate.js**
+   - Provides a context and a provider for managing the global state of the transactions. It uses `useReducer` for state management.
 
-## Learn More
+2. **Appreducer.js**
+   - A reducer that handles actions for getting transactions, adding a transaction, and deleting a transaction. It also sorts transactions by date whenever they are added or deleted.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Styling
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Tailwind CSS**: The project uses Tailwind CSS for utility-first styling. Custom styles are added in `App.css` and `index.css`.
 
-### Code Splitting
+### Local Storage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The transactions are stored in the browser's local storage to persist data across sessions. The `Globalstate.js` file handles reading from and writing to local storage.
 
-### Analyzing the Bundle Size
+## Installation and Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Clone the repository:
+   git clone https://github.com/your-username/expense-tracker.git
+   cd expense-tracker
+2. Install the dependencies:
+      npm install
+3. Start the development server:
+    npm start
+   
+## Usage
+- To add a transaction, click the "Add Income" or "Add Expense" button, fill in the form, and submit.
+- To delete a transaction, click the "Delete" button next to the transaction.
+- To filter transactions by category, select a category from the dropdown menu.
+- View total amount for filtered transactions by category
+- The total income, total expenses, and net income are displayed at the top of the page.
+- Transactions are stored locally using the browser's local storage
 
-### Making a Progressive Web App
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
