@@ -36,6 +36,7 @@ expense-tracker/
 ├── .gitignore
 ├── package.json
 └── README.md
+└── tailwind.config.js
 
 ```
 ### Components
