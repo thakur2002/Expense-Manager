@@ -85,13 +85,13 @@ expense-tracker/
 ## Installation and Setup
 
 1. Clone the repository:
-   git clone https://github.com/thakur2002/Expense-Tracker.git
+   ```git clone https://github.com/thakur2002/Expense-Tracker.git```
 3. Navigate to the project directory:
-   cd expense-tracker
+   ```cd expense-tracker```
 4. Install the dependencies:
-      npm install
+      ```npm install```
 5. Start the development server:
-    npm start
+    ```npm start```
    
 ## Usage
 - To add a transaction, click the "Add Income" or "Add Expense" button, fill in the form, and submit.
