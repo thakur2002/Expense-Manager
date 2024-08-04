@@ -2,6 +2,10 @@
 
 Expense Tracker is a simple web application built using React to help you manage your finances. You can add and categorize your income and expenses, view totals, and filter transactions by category.
 
+## Website Link
+
+Website is live [here](https://trackingexpense-wb29.onrender.com)
+
 ## Features
 
 - Add income and expenses
@@ -81,7 +85,7 @@ expense-tracker/
 ## Installation and Setup
 
 1. Clone the repository:
-   git clone https://github.com/your-username/expense-tracker.git
+   git clone https://github.com/thakur2002/Expense-Tracker.git
    cd expense-tracker
 2. Install the dependencies:
       npm install
