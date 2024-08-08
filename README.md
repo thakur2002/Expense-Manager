@@ -1,6 +1,6 @@
-# Expense Tracker
+# Expense-Manager
 
-Expense Tracker is a simple web application built using React to help you manage your finances. You can add and categorize your income and expenses, view totals, and filter transactions by category.
+Expense Manager is a simple web application built using React to help you manage your finances. You can add and categorize your income and expenses, view totals, and filter transactions by category.
 
 ## Website Link
 
